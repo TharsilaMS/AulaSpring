@@ -1,10 +1,17 @@
 package br.org.fundatec.aula03;
 
-import java.util.Objects;
+import jakarta.persistence.*;
 
+import java.util.Objects;
+@Entity
 public class Carro {
+    @Id
+    @Column(length = 8)
     private String placa;
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20)
     private Cor cor;
+    @Column(length = 50)
     private String marca;
     private Integer ano;
 

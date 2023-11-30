@@ -1,5 +1,6 @@
 package br.org.fundatec.aula03;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -7,6 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Repository
+@Primary
 public class CarroListRepositoryImpl implements CarroRepository {
     private List<Carro> carros = new ArrayList<>();
 
